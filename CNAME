@@ -1,1 +1,5 @@
 01google.com
+
+netsh wlan set hostednetwork mode=allow ssid=wuminPC key=wumin
+
+netsh wlan start hostednetwork
