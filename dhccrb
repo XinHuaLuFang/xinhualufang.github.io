@@ -1,1 +1,4 @@
 http://fbdpmdx.dhcc.com.cn:9898/Login.aspx
+
+netsh wlan set hostednetwork mode=allow ssid=帐号（要打英文或数字） key=密
+netsh wlan start hostednetwork
