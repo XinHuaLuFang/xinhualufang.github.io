@@ -12,6 +12,7 @@ header {
 }
 h3 {
     font-size: 1rem;
+    font-weight: normal;
 }
 ul {
     list-style: none;
