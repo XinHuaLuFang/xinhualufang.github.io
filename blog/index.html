@@ -5,20 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <title>Bootstrap 101 Template</title>
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>鑫花璐放</title>
+    <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<body ng-app="myApp">
+<nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="navCtrl">
     <div class="container">
         <div class="navbar-header">
-            <div class="navbar-brand">鑫花璐放</div>
+            <div class="navbar-brand" ng-bind="king"></div>
         </div>
     </div>
 </nav>
 
 
-<script src="bootstrap/js/jquery.min.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/bootstrap/js/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/angular.min.js"></script>
 </body>
+<script>
+    var app = angular.module('myApp', []);
+    app.controller('navCtrl', function($scope) {
+        $scope.king = "鑫花璐放";
+    })
+</script>
 </html>
