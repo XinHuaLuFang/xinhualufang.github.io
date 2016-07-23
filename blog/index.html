@@ -21,9 +21,12 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+                <!--
                 <li><a href="#demo">DEMO</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#html5">HTML5</a></li>
+                -->
+                <li ng-repeat="r in route"><a ng-href="{{r.link}}" ng-bind="r.title"></a></li>
             </ul>
         </div>
     </div>
@@ -39,6 +42,20 @@
     var app = angular.module('myApp', ['ngRoute']);
     app.controller('navCtrl', function($scope) {
         $scope.king = "鑫花璐放";
+        $scope.route = [
+            {
+                "title": "DEMO",
+                "link": "#demo"
+            },
+            {
+                "title": "ABOUT",
+                "link": "#about"
+            },
+            {
+                "title": "HTML5",
+                "link": "#html5"
+            }
+        ];
     })
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.
