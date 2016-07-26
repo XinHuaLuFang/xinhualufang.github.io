@@ -44,16 +44,16 @@
         $scope.king = "鑫花璐放";
         $scope.route = [
             {
+                "title": "HTML5",
+                "link": "#html5"
+            },
+            {
                 "title": "DEMO",
                 "link": "#demo"
             },
             {
                 "title": "ABOUT",
                 "link": "#about"
-            },
-            {
-                "title": "HTML5",
-                "link": "#html5"
             }
         ];
     })
@@ -72,7 +72,7 @@
             templateUrl: 'demo/webworkers1.html'
         }).
         otherwise({
-            redirectTo: '/demo'
+            redirectTo: '/html5'
         });
     }])
 </script>
