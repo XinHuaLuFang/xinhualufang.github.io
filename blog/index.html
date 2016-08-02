@@ -17,9 +17,15 @@
 <nav class="navbar navbar-inverse navbar-fixed-top" ng-controller="navCtrl">
     <div class="container">
         <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
             <div class="navbar-brand" ng-bind="king"></div>
         </div>
-        <div class="navbar-collapse collapse">
+        <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
                 <!--
                 <li><a href="#demo">DEMO</a></li>
@@ -32,7 +38,6 @@
     </div>
 </nav>
 <div class="container" ng-view></div>
-
 <script src="lib/bootstrap/js/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/angular.min.js"></script>
@@ -43,6 +48,10 @@
     app.controller('navCtrl', function($scope) {
         $scope.king = "鑫花璐放";
         $scope.route = [
+            {
+                "title": "JS",
+                "link": "#js"
+            },
             {
                 "title": "HTML5",
                 "link": "#html5"
@@ -59,20 +68,26 @@
     })
     app.config(['$routeProvider', function($routeProvider) {
         $routeProvider.
+        when('/js', {
+            templateUrl: 'js.html'
+        }).
+        when('/html5', {
+            templateUrl: 'html5.html'
+        }).
         when('/demo', {
             templateUrl: 'demo.html'
         }).
         when('/about', {
             templateUrl: 'about.html'
         }).
-        when('/html5', {
-            templateUrl: 'html5.html'
-        }).
         when('/webworkers1', {
             templateUrl: 'demo/webworkers1.html'
         }).
+        when('/js_2016080201', {
+            templateUrl: 'js/js_2016080201.html'
+        }).
         otherwise({
-            redirectTo: '/html5'
+            redirectTo: '/js'
         });
     }])
 </script>
