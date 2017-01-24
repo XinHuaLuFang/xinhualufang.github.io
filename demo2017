@@ -1,0 +1,19 @@
+<!DOCTYPE>
+<html>
+  <head>
+  
+  </head>
+  <body>
+  <div id="content"></div>
+  </body>
+  <script src="http://www.w3school.com.cn/jquery/jquery-1.11.1.min.js"></script>
+  <script>
+    $(function() {
+      $.ajax({
+        url: 'http://59.110.156.106/'
+      }).done(function(res) {
+        $("#content").text(res);
+      });
+    });
+  </script>
+</html>
