@@ -10,7 +10,8 @@
   <script>
     $(function() {
       $.ajax({
-        url: 'http://59.110.156.106/'
+        url: 'http://59.110.156.106/',
+        crossDomain: true
       }).done(function(res) {
         $("#content").text(res);
       });
