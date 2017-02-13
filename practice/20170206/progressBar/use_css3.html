@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #progress {
+            height: 2px;
+            background: #b91f1f;
+            -moz-animation: pluse 3s;
+            -ms-animation: pluse 3s;
+            -o-animation: pluse 3s;
+            -webkit-animation: pluse 3s;
+            animation: pluse 3s;
+        }
+        @-moz-keyframes pluse {
+            0% {width: 0}
+            100% {width: 100%}
+        }
+        @-ms-keyframes pluse {
+            0% {width: 0}
+            100% {width: 100%}
+        }
+        @-o-keyframes pluse {
+            0% {width: 0}
+            100% {width: 100%}
+        }
+        @-webkit-keyframes pluse {
+            0% {width: 0}
+            100% {width: 100%}
+        }
+    </style>
+</head>
+<body>
+    <div id="progress"></div>
+</body>
+</html>

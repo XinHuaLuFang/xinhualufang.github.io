@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box
+        }
+        #progress {
+            height: 2px;
+            background: #b91f1f;
+            transition: opacity 500ms linear
+        }
+        #progress.done {
+            opacity: 0
+        }
+    </style>
+</head>
+<body>
+    <div id="progress"></div>
+</body>
+<script src="../../../plugin/jquery.min.js"></script>
+<script>
+        $({property: 0}).animate({property: 100}, {
+            duration: 3000,
+            step: function() {
+                var percentage = Math.round(this.property);
+                $("#progress").css("width", percentage + "%");
+                if (percentage == 100) {
+                    $("#progress").addClass("done");
+                }
+            }
+        });
+</script>
+</html>
