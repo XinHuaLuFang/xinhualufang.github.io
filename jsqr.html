@@ -68,6 +68,7 @@
     var outputContainer = document.getElementById("output");
     var outputMessage = document.getElementById("outputMessage");
     var outputData = document.getElementById("outputData");
+    var num = null;
 
     function drawLine(begin, end, color) {
       canvas.beginPath();
@@ -83,7 +84,7 @@
       video.srcObject = stream;
       video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
       video.play();
-      requestAnimationFrame(tick);
+      num = requestAnimationFrame(tick);
     });
 
     function tick() {
@@ -109,13 +110,14 @@
           outputData.parentElement.hidden = false;
           outputData.innerText = code.data;
           //
+          cancelAnimationFrame(num)
           window.location.reload('./index1.html#' + code.data)
         } else {
           outputMessage.hidden = false;
           outputData.parentElement.hidden = true;
         }
       }
-      requestAnimationFrame(tick);
+      num = requestAnimationFrame(tick);
     }
   </script>
 </body>
