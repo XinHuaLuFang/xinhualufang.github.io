@@ -111,7 +111,7 @@
           outputData.innerText = code.data;
           //
           cancelAnimationFrame(num)
-          window.location.reload('./index1.html#' + code.data)
+          window.location.replace('./index1.html#' + code.data)
         } else {
           outputMessage.hidden = false;
           outputData.parentElement.hidden = true;
